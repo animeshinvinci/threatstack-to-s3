@@ -7,5 +7,5 @@ gevent.monkey.patch_all()
 application = create_app()
 
 if __name__ == '__main__':
-    print "== Running in debug mode =="
+    print("== Running in debug mode ==")
     application.run(host='localhost', port=8080, debug=True)
