@@ -8,12 +8,17 @@ import sys
 THREATSTACK_BASE_URL = os.environ.get('THREATSTACK_BASE_URL', 'https://app.threatstack.com/api/v1')
 THREATSTACK_API_KEY = os.environ.get('THREATSTACK_API_KEY')
 
-class ThreatStackRequestError:
+class ThreatStackError(Exception):
+    '''
+    Base Threat Stack error class.
+    '''
+
+class ThreatStackRequestError(ThreatStackError):
     '''
     Error in request to Threat Stack.
     '''
 
-class ThreatStackAPIError:
+class ThreatStackAPIError(ThreatStackError):
     '''
     Error returned from Threat Stack API.
     '''
