@@ -36,6 +36,8 @@ def put_webhook_data(alert):
         Key=alert_key
     )
 
+    return None
+
 def put_alert_data(alert):
     '''
     Put alert data in S3.
@@ -57,4 +59,6 @@ def put_alert_data(alert):
         Bucket=TS_AWS_S3_BUCKET,
         Key=alert_key
     )
+
+    return None
 
